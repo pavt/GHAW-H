@@ -30,7 +30,7 @@ a:hover { text-decoration: underline; }
 img { display: block; max-width: 100%; height: auto; }
 
 .paper-header { padding: 4.5rem 0 2rem; text-align: center; }
-.project-links { display: flex; flex-wrap: wrap; justify-content: center; gap: .65rem; }
+.project-links { display: flex; flex-wrap: wrap; justify-content: center; gap: .65rem; margin-top: 1.8rem; }
 .project-links a {
   display: inline-flex;
   align-items: center;
