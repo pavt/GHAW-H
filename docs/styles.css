@@ -47,8 +47,8 @@ img { display: block; max-width: 100%; height: auto; }
 figure { margin: 2rem 0 0; }
 figure img { margin: 0 auto; }
 figcaption { max-width: 820px; margin: .7rem auto 0; color: var(--muted); font-size: .91rem; text-align: center; }
-.history-figure { width: 100%; }
-.history-figure img { width: 100%; }
+.featured-figure { width: 100%; }
+.featured-figure img { width: 100%; }
 
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); margin: 2rem 0 1rem; border: 1px solid var(--line); border-radius: 6px; }
 .stats div { padding: 1.2rem .6rem; text-align: center; border-right: 1px solid var(--line); }
