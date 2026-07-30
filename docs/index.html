@@ -30,15 +30,9 @@
         <img src="assets/early_adopters.png" alt="GitHub Agentic Workflows early adopters">
       </section>
 
-      <section class="tldr">
-        <h2>TL;DR</h2>
-        <p><strong>GHAW-H</strong> connects repository metadata with the observable history of natural-language workflow specifications and their aligned lock files. It contains 262 repositories, 604 source histories, 2,820 Markdown versions, and 2,820 lock snapshots.</p>
-      </section>
-
       <section>
-        <h2>Dataset overview</h2>
-        <p>GitHub Agentic Workflows are natural-language automation specifications stored as Markdown and compiled into GitHub Actions lock files. GHAW-H preserves their observable evolution instead of reducing each repository to a single current snapshot.</p>
-        <p>Every published record is backed by a GitHub artifact or API response. The release separates immutable source content from its position in a commit history, enabling reproducible longitudinal analysis without exposing the private collection and construction system.</p>
+        <h2>Dataset Overview</h2>
+        <p><strong>GHAW-H</strong> connects repository metadata with the observable history of natural-language workflow specifications and their aligned lock files. It contains 262 repositories, 604 source histories, 2,820 Markdown versions, and 2,820 lock snapshots.</p>
         <figure>
           <img src="assets/gawd_cumulative_all_repositories.png" alt="Cumulative observed adoption of GitHub Agentic Workflows by repository">
           <figcaption>Cumulative observed adoption, based on the earliest confirmed committed workflow source in each repository.</figcaption>
@@ -53,16 +47,10 @@
           <div><strong>2,820</strong><span>Markdown versions</span></div>
           <div><strong>2,820</strong><span>lock snapshots</span></div>
         </div>
-        <div class="two-column">
-          <figure>
-            <img src="assets/gawd_total_language_percentages_top.png" alt="Top repository language percentages">
-            <figcaption>Repository language context for the observed early-adopter population.</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/gawd_history_depth.png" alt="Distribution of workflow source-history depth">
-            <figcaption>Confirmed source versions per workflow history.</figcaption>
-          </figure>
-        </div>
+        <figure class="history-figure">
+          <img src="assets/gawd_history_depth.png" alt="Distribution of workflow source-history depth">
+          <figcaption>Confirmed source versions per workflow history.</figcaption>
+        </figure>
       </section>
 
       <section>
@@ -84,7 +72,7 @@
             <a href="https://colab.research.google.com/github/pavt/GHAW-H/blob/main/notebooks/load_GAWD.ipynb">Open in Colab →</a>
           </article>
           <article>
-            <h3>Dataset overview</h3>
+            <h3>Dataset Overview</h3>
             <p>Inspect coverage and reproduce the cumulative adoption figure.</p>
             <a href="https://colab.research.google.com/github/pavt/GHAW-H/blob/main/notebooks/dataset_overview.ipynb">Open in Colab →</a>
           </article>
