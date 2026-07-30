@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="GHAW-H is a dataset of versioned GitHub Agentic Workflow histories from early-adopter open-source repositories.">
+    <meta property="og:title" content="GHAW-H · GitHub Agentic Workflow Histories">
+    <meta property="og:description" content="262 repositories, 604 workflow histories, and 2,820 aligned source and lock snapshots.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pavt.github.io/GHAW-H/">
+    <meta property="og:image" content="https://pavt.github.io/GHAW-H/assets/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>GHAW-H · GitHub Agentic Workflow Histories</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="GHAW-H home">
+        <span class="brand-mark" aria-hidden="true">H</span>
+        <span>GHAW-H</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#overview">Overview</a>
+        <a href="#schema">Schema</a>
+        <a href="#notebooks">Notebooks</a>
+        <a href="#citation">Citation</a>
+      </nav>
+      <a class="top-cta" href="https://huggingface.co/datasets/pavtch/GHAW-H">View dataset</a>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">Open research dataset · Source history profile</p>
+          <h1>How agentic workflows <em>evolve</em> in the open.</h1>
+          <p class="hero-lead">GHAW-H connects repository metadata, natural-language workflow specifications, commit histories, and aligned lock artifacts into one evidence-first longitudinal dataset.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://huggingface.co/datasets/pavtch/GHAW-H">Explore on Hugging Face <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="https://github.com/pavt/GHAW-H">Documentation <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Dataset evidence chain">
+          <div class="terminal-bar"><span></span><span></span><span></span><b>evidence.graph</b></div>
+          <ol class="evidence-chain">
+            <li><span>01</span><strong>Repository</strong><small>observable metadata</small></li>
+            <li><span>02</span><strong>Markdown snapshot</strong><small>literal source evidence</small></li>
+            <li><span>03</span><strong>Version</strong><small>commit + temporal position</small></li>
+            <li><span>04</span><strong>Lock snapshot</strong><small>aligned executable artifact</small></li>
+          </ol>
+        </aside>
+      </section>
+
+      <section class="metrics" aria-label="Dataset statistics">
+        <article><strong data-count="262">262</strong><span>repositories</span></article>
+        <article><strong data-count="604">604</strong><span>source histories</span></article>
+        <article><strong data-count="2820">2,820</strong><span>Markdown versions</span></article>
+        <article><strong data-count="2820">2,820</strong><span>aligned lock snapshots</span></article>
+      </section>
+
+      <section class="section" id="overview">
+        <div class="section-heading">
+          <p class="eyebrow">Dataset overview</p>
+          <h2>A longitudinal view, not a flat inventory.</h2>
+          <p>Each published row preserves an observable GitHub artifact or API fact. GHAW-H separates immutable content from temporal position, making workflow evolution reproducible and auditable.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature feature-wide">
+            <div class="feature-copy">
+              <span class="index">01</span>
+              <h3>Observed adoption over time</h3>
+              <p>Repository-level adoption is derived from the earliest observable committed workflow version, while the underlying version records remain available for independent analysis.</p>
+            </div>
+            <img src="assets/gawd_cumulative_all_repositories.png" alt="Cumulative observed GH-AW adoption by repository">
+          </article>
+          <article class="feature">
+            <span class="index">02</span>
+            <h3>Language context</h3>
+            <p>Repository language metadata enables ecosystem-level comparisons without inferring language from workflow content.</p>
+            <img src="assets/gawd_total_language_percentages_top.png" alt="Top repository language percentages">
+          </article>
+          <article class="feature feature-dark">
+            <span class="index">03</span>
+            <h3>History depth</h3>
+            <p>Version chains expose how often workflow specifications change and how long their observable histories span.</p>
+            <img src="assets/gawd_history_depth.png" alt="Distribution of GHAW-H history depth">
+          </article>
+        </div>
+      </section>
+
+      <section class="section schema-section" id="schema">
+        <div class="section-heading compact">
+          <p class="eyebrow">Relational schema</p>
+          <h2>Five tables. One traceable evidence path.</h2>
+        </div>
+        <div class="schema-layout">
+          <div class="schema-image">
+            <img src="assets/gh-aw-er-v0.1.svg" alt="Entity-relationship diagram for the five GHAW-H tables">
+          </div>
+          <div class="table-list">
+            <article><b>repository</b><span>262 rows</span><p>Observed identity, ownership, language, activity, and popularity metadata.</p></article>
+            <article><b>source_markdown_file_history</b><span>604 rows</span><p>Longitudinal identity for each confirmed workflow source.</p></article>
+            <article><b>source_markdown_file_snapshot</b><span>2,820 rows</span><p>Literal Markdown, frontmatter, body, path, and repository relationship.</p></article>
+            <article><b>source_markdown_file_version</b><span>2,820 rows</span><p>Commit metadata, rank, history membership, and neighbor links.</p></article>
+            <article><b>lock_file_snapshot</b><span>2,820 rows</span><p>Lock content and file SHA aligned one-to-one with a source version.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="notebooks">
+        <div class="section-heading">
+          <p class="eyebrow">Start exploring</p>
+          <h2>From download to analysis in one click.</h2>
+          <p>The notebooks load the public Parquet tables directly from Hugging Face. They do not require access to the private dataset builder.</p>
+        </div>
+        <div class="notebook-grid">
+          <a href="https://colab.research.google.com/github/pavt/GHAW-H/blob/main/notebooks/load_GAWD.ipynb"><span>01</span><h3>Load GHAW-H</h3><p>Read every table and construct the core analytical joins.</p><b>Open in Colab ↗</b></a>
+          <a href="https://colab.research.google.com/github/pavt/GHAW-H/blob/main/notebooks/dataset_overview.ipynb"><span>02</span><h3>Dataset overview</h3><p>Inspect coverage and visualize cumulative adoption.</p><b>Open in Colab ↗</b></a>
+          <a href="https://colab.research.google.com/github/pavt/GHAW-H/blob/main/notebooks/language_usage.ipynb"><span>03</span><h3>Language usage</h3><p>Compare adoption across repository language ecosystems.</p><b>Open in Colab ↗</b></a>
+          <a href="https://colab.research.google.com/github/pavt/GHAW-H/blob/main/notebooks/history_data.ipynb"><span>04</span><h3>History analysis</h3><p>Explore version depth, history span, and temporal change.</p><b>Open in Colab ↗</b></a>
+        </div>
+      </section>
+
+      <section class="section principles">
+        <div>
+          <p class="eyebrow">Evidence-first by design</p>
+          <h2>Observable artifacts in. Auditable records out.</h2>
+        </div>
+        <ul>
+          <li><span>✓</span>Confirmed Markdown and matching lock artifacts</li>
+          <li><span>✓</span>Literal source content without semantic inference</li>
+          <li><span>✓</span>Commit-linked historical versions</li>
+          <li><span>✓</span>Strict structural and relational validation</li>
+          <li><span>✓</span>Operational provenance excluded from public tables</li>
+        </ul>
+      </section>
+
+      <section class="section citation" id="citation">
+        <div>
+          <p class="eyebrow">Citation</p>
+          <h2>Use GHAW-H in your research.</h2>
+          <p>Citation metadata accompanies the public repository. Paper-specific bibliographic details will be added when available.</p>
+        </div>
+        <pre><code>@dataset{ghaw_h_2026,
+  title   = {GHAW-H: GitHub Agentic Workflow Histories},
+  year    = {2026},
+  url     = {https://huggingface.co/datasets/pavtch/GHAW-H},
+  version = {0.1.0}
+}</code></pre>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">H</span><span>GHAW-H</span></a>
+      <p>GitHub Agentic Workflow Histories · Released for reproducible research.</p>
+      <div><a href="https://huggingface.co/datasets/pavtch/GHAW-H">Dataset</a><a href="https://github.com/pavt/GHAW-H">GitHub</a></div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

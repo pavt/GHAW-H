@@ -1,0 +1,204 @@
+{
+  "generated_at": "2026-07-30T14:55:42Z",
+  "layers": {
+    "data": {
+      "lock_file_snapshot": {
+        "columns": [
+          {
+            "name": "lock_file_snapshot_id",
+            "nullable": true,
+            "type": "int64"
+          },
+          {
+            "name": "source_markdown_file_version_id",
+            "nullable": true,
+            "type": "int64"
+          },
+          {
+            "name": "path",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "name": "content",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "name": "file_sha",
+            "nullable": true,
+            "type": "string"
+          }
+        ],
+        "path": "lock_file_snapshot.parquet",
+        "row_count": 2820
+      },
+      "repository": {
+        "columns": [
+          {
+            "name": "repository_id",
+            "nullable": true,
+            "type": "int64"
+          },
+          {
+            "name": "url",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "name": "license",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "name": "repo_full_name",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "name": "repo_owner",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "name": "repo_name",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "name": "main_language",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "name": "forks",
+            "nullable": true,
+            "type": "int64"
+          },
+          {
+            "name": "stars",
+            "nullable": true,
+            "type": "int64"
+          },
+          {
+            "name": "created_at",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "name": "updated_at",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "name": "pushed_at",
+            "nullable": true,
+            "type": "string"
+          }
+        ],
+        "path": "repository.parquet",
+        "row_count": 262
+      },
+      "source_markdown_file_history": {
+        "columns": [
+          {
+            "name": "source_markdown_file_history_id",
+            "nullable": true,
+            "type": "int64"
+          },
+          {
+            "name": "version_count",
+            "nullable": true,
+            "type": "int64"
+          }
+        ],
+        "path": "source_markdown_file_history.parquet",
+        "row_count": 604
+      },
+      "source_markdown_file_snapshot": {
+        "columns": [
+          {
+            "name": "source_markdown_file_snapshot_id",
+            "nullable": true,
+            "type": "int64"
+          },
+          {
+            "name": "repository_id",
+            "nullable": true,
+            "type": "int64"
+          },
+          {
+            "name": "path",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "name": "content",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "name": "frontmatter",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "nullable": true,
+            "type": "string"
+          }
+        ],
+        "path": "source_markdown_file_snapshot.parquet",
+        "row_count": 2820
+      },
+      "source_markdown_file_version": {
+        "columns": [
+          {
+            "name": "source_markdown_file_version_id",
+            "nullable": true,
+            "type": "int64"
+          },
+          {
+            "name": "source_markdown_file_history_id",
+            "nullable": true,
+            "type": "int64"
+          },
+          {
+            "name": "source_markdown_file_snapshot_id",
+            "nullable": true,
+            "type": "int64"
+          },
+          {
+            "name": "commit_sha",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "name": "committed_at",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "name": "rank",
+            "nullable": true,
+            "type": "int64"
+          },
+          {
+            "name": "predecessor_source_markdown_file_version_id",
+            "nullable": true,
+            "type": "int64"
+          },
+          {
+            "name": "successor_source_markdown_file_version_id",
+            "nullable": true,
+            "type": "int64"
+          }
+        ],
+        "path": "source_markdown_file_version.parquet",
+        "row_count": 2820
+      }
+    }
+  },
+  "profile": "source_history",
+  "version": "GHAW-H"
+}

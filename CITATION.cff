@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use GHAW-H, please cite this dataset release."
+title: "GHAW-H: GitHub Agentic Workflow Histories"
+type: dataset
+authors:
+  - name: "SwareUG"
+version: "0.1.0"
+date-released: 2026-07-30
+license: CC-BY-4.0
+repository-code: "https://github.com/pavt/GHAW-H"
+url: "https://huggingface.co/datasets/pavtch/GHAW-H"
+
