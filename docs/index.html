@@ -3,13 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A dataset of GitHub Agentic Workflows from early-adopter open-source repositories.">
     <meta property="og:title" content="GHAW-H: A Dataset of GitHub Agentic Workflow Histories">
-    <meta property="og:description" content="A dataset of GitHub Agentic Workflows from early-adopter open-source repositories.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pavt.github.io/GHAW-H/">
-    <meta property="og:image" content="https://pavt.github.io/GHAW-H/assets/early_adopters.png">
-    <meta name="twitter:card" content="summary_large_image">
     <title>GHAW-H: A Dataset of GitHub Agentic Workflow Histories</title>
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -17,17 +13,12 @@
     <main>
       <section class="paper-header">
         <h1>GHAW-H: A Dataset of<br>GitHub Agentic Workflow Histories</h1>
-        <p class="subtitle">A dataset of GitHub Agentic Workflows from early-adopter open-source repositories.</p>
         <nav class="project-links" aria-label="Project resources">
           <a href="https://huggingface.co/datasets/pavtch/GHAW-H"><span aria-hidden="true">🤗</span> Dataset</a>
           <a href="https://github.com/pavt/GHAW-H"><span aria-hidden="true">◉</span> GitHub</a>
           <a href="https://github.com/pavt/GHAW-H/tree/main/notebooks"><span aria-hidden="true">▣</span> Notebooks</a>
           <a href="#citation"><span aria-hidden="true">❝</span> Citation</a>
         </nav>
-      </section>
-
-      <section class="hero-figure" aria-label="GHAW-H project image">
-        <img src="assets/early_adopters.png" alt="GitHub Agentic Workflows early adopters">
       </section>
 
       <section>
@@ -55,7 +46,6 @@
 
       <section>
         <h2>Relational schema</h2>
-        <p>The five-table <code>source_history</code> profile keeps repository identity, immutable snapshots, ordered versions, longitudinal histories, and aligned lock artifacts conceptually separate.</p>
         <figure class="schema">
           <img src="assets/gh-aw-er-v0.1.svg" alt="Entity-relationship diagram for the five GHAW-H tables">
           <figcaption>GHAW-H v0.1 relational schema. Field definitions are available in the <a href="https://github.com/pavt/GHAW-H/blob/main/schema/table_dictionary.md">table dictionary</a>.</figcaption>
@@ -64,7 +54,6 @@
 
       <section>
         <h2>Explore the dataset</h2>
-        <p>The notebooks load the public Parquet tables directly from Hugging Face. They do not require access to the private builder repository or authorization through GitHub.</p>
         <div class="notebooks">
           <article>
             <h3>Load GHAW-H</h3>
