@@ -6,7 +6,7 @@
 
 GHAW-H is a research dataset describing the observable evolution of GitHub Agentic Workflows (GH-AW) in early-adopter open-source repositories. It connects repository metadata with versioned workflow Markdown specifications and their aligned lock-file snapshots.
 
-This public repository is the dataset companion package. It contains documentation, schema material, figures, and executable notebooks. The normalized Parquet tables are hosted on [Hugging Face](https://huggingface.co/datasets/pavtch/GHAW-H); the private collection and construction system is intentionally not distributed here.
+This public repository is the dataset companion package. It contains documentation, schema material, figures, and executable notebooks. The Parquet tables are hosted on [Hugging Face](https://huggingface.co/datasets/pavtch/GHAW-H).
 
 ## Dataset at a glance
 
