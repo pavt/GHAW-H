@@ -49,40 +49,7 @@ versions = pd.read_parquet(f"{base}/source_markdown_file_version.parquet")
 
 ![GHAW-H entity-relationship diagram](schema/gh-aw-er-v0.1.svg)
 
-The detailed [table dictionary](schema/table_dictionary.md) documents every public field. The machine-readable physical schema is available in [`schema.json`](schema/schema.json).
-
-The main evidence path is:
-
-```text
-repository
-  → source_markdown_file_snapshot
-  → source_markdown_file_version
-  → source_markdown_file_history
-
-source_markdown_file_version
-  → lock_file_snapshot
-```
-
-## Evidence and validation
-
-GHAW-H follows an evidence-first policy:
-
-- Markdown snapshots require observable source content and a matching lock artifact.
-- Historical versions are linked to observable commits.
-- A published source version has exactly one aligned lock-file snapshot.
-- Operational collection provenance is not part of the analytical release.
-- The current release passed strict structural and relational validation with no errors or warnings.
-
-## Repository structure
-
-```text
-notebooks/   executable examples and analyses
-figures/     published visual summaries
-schema/      ER diagram, table dictionary, and physical schema
-docs/        static project website for GitHub Pages
-```
-
-The full dataset is not duplicated in this repository. Download it from [Hugging Face](https://huggingface.co/datasets/pavtch/GHAW-H/tree/main/data).
+The detailed [table dictionary](schema/table_dictionary.md) documents every public field.
 
 ## License
 
@@ -91,4 +58,3 @@ The release metadata declares CC BY 4.0. Content originating from source reposit
 ## Citation
 
 Citation metadata is provided in [`CITATION.cff`](CITATION.cff). Paper citation details will be added when available.
-
