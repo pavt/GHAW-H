@@ -65,6 +65,14 @@ figcaption { max-width: 820px; margin: .7rem auto 0; color: var(--muted); font-s
 
 code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
 pre { overflow-x: auto; margin: 1.5rem 0 0; padding: 1.35rem; background: var(--soft); border-radius: 6px; font-size: .88rem; line-height: 1.6; }
+.affiliations { margin-top: 5.5rem; text-align: center; }
+.affiliations > p { margin-bottom: 1.8rem; color: var(--muted); font-size: .9rem; }
+.affiliation-logos { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2.5rem 4rem; }
+.affiliation-logos a { display: inline-flex; align-items: center; justify-content: center; min-height: 92px; }
+.affiliation-logos img { width: auto; object-fit: contain; }
+.logo-bern { max-height: 88px; }
+.logo-ufro { max-width: 260px; max-height: 92px; }
+.logo-ai4i { max-height: 82px; }
 footer { padding: 2rem 20px 3rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .82rem; text-align: center; }
 footer p { margin: .2rem 0; }
 
@@ -76,4 +84,6 @@ footer p { margin: .2rem 0; }
   .stats div:nth-child(2) { border-right: 0; }
   .stats div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
   .notebooks { grid-template-columns: 1fr; }
+  .affiliation-logos { gap: 2rem; }
+  .affiliation-logos a { flex: 1 1 100%; }
 }
