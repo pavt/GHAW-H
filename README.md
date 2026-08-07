@@ -1,5 +1,6 @@
 # GHAW-H: GitHub Agentic Workflow Histories
 
+[![Paper](https://img.shields.io/badge/paper-PDF-B31B1B?logo=adobeacrobatreader&logoColor=white)](docs/assets/GHAW-H.pdf)
 [![Dataset](https://img.shields.io/badge/dataset-Hugging%20Face-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/datasets/pavtch/GHAW-H)
 [![Website](https://img.shields.io/badge/project-website-162A46)](https://pavt.github.io/GHAW-H/)
 [![License: CC BY 4.0](https://img.shields.io/badge/license-CC%20BY%204.0-2D7F75)](LICENSE)
